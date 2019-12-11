@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   labels:
     service: backend-feed
-  name: backend-feed
+  name: backend-feed-prod
 spec:
   replicas: 2
   template:
@@ -12,7 +12,7 @@ spec:
         service: backend-feed
     spec:
       containers:
-      - image: antonioisasi/udacity-restapi-feed
+      - image: antonioisasi/udacity-restapi-feed:prod
         name: backend-feed
         imagePullPolicy: Always  
         resources:

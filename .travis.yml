@@ -14,8 +14,19 @@ before_install:
   - curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl
   - chmod +x ./kubectl
   - sudo mv ./kubectl /usr/local/bin/kubectl
+  - docker login -u "${DOCKER_USERNAME}" -p "${DOCKER_PASSWORD}"
 
 
 
 install:
-  - docker-compose -f deployment/docker/docker-compose-build.yaml build --parallel 
+  - docker-compose -f deployment/docker/docker-compose-build.yaml build --parallel
+  - docker-compose -f deployment/docker/docker-compose-build.yaml push
+  - export KUBECONFIG=$PWD/udagramaisasi-kubeconfig
+  - sed -i -e 's|KUBE_CA_CERT|'"${KUBE_CA_CERT}"'|g' udagramaisasi-kubeconfig
+  - sed -i -e 's|KUBE_ENDPOINT|'"${KUBE_ENDPOINT}"'|g' udagramaisasi-kubeconfig
+  - sed -i -e 's|KUBE_ADMIN_CERT|'"${KUBE_ADMIN_CERT}"'|g' udagramaisasi-kubeconfig
+  - sed -i -e 's|KUBE_ADMIN_KEY|'"${KUBE_ADMIN_KEY}"'|g' udagramaisasi-kubeconfig
+  - kubectl apply -f deployment/k8s/backend-feed-deployment.yaml
+  - kubectl apply -f deployment/k8s/backend-user-deployment.yaml
+  - kubectl apply -f deployment/k8s/frontend-deployment.yaml
+  - kubectl apply -f deployment/k8s/reverseproxy-deployment.yaml

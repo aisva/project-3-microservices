@@ -29,15 +29,15 @@ A `.travis.yml` configuration file is provided for building and deploying the ap
 2. Pushing the images to [Docker Hub](https://hub.docker.com/).
 3. Deploying the application to a Kubernetes cluster.
 
-# Resources: screenshots and links
+# Evidence: screenshots and links
 To demonstrate the implementation of all of the features required by the rubric of the third project of Udacity's [Cloud Developer Nanodegree Program](https://www.udacity.com/course//cloud-developer-nanodegree--nd9990), the following screenshots and links are provided:
 
 * A screenshot of the application running (see [screenshots](https://github.com/aisva/project-3-microservices/tree/master/screenshots) folder).
-* A screenshot of Travis CI that shows how the application is successfully built and deployed (see [screenshots](https://github.com/aisva/project-3-microservices/tree/master/screenshots) folder).
+* Screenshots of Travis CI that show how the application is successfully built and deployed (see [screenshots](https://github.com/aisva/project-3-microservices/tree/master/screenshots) folder).
 * Links to the Docker Hub images of all the services: 
   * [User microservice](https://hub.docker.com/r/antonioisasi/udacity-restapi-user)
   * [Feed microservice](https://hub.docker.com/r/antonioisasi/udacity-restapi-feed)
   * [Proxy server](https://hub.docker.com/r/antonioisasi/reverseproxy)
   * [Frontend application](https://hub.docker.com/r/antonioisasi/udacity-frontend)
-* Screenshots of the outputs of the following commands: `kubectl get pods`, `kubectl get deployments` and `kubectl get svc` (see [screenshots](https://github.com/aisva/project-3-microservices/tree/master/screenshots) folder).
+* A screenshot of the outputs of the following commands: `kubectl get pods` and `kubectl get deployments` (see [screenshots](https://github.com/aisva/project-3-microservices/tree/master/screenshots) folder).
 * A screenshot that shows how the application is monitored by AWS CloudWatch (see [screenshots](https://github.com/aisva/project-3-microservices/tree/master/screenshots) folder).

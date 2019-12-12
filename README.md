@@ -1,5 +1,5 @@
 # Udagram
-Udagram is a cloud application that allows users to register and log into a web client where they can post photos to a feed. It is the third project of Udacity's [Cloud Developer Nanodegree Program](https://www.udacity.com/course//cloud-developer-nanodegree--nd9990).
+Udagram is a cloud application that allows users to register and log into a web client where they can post photos to a feed. It is the third project of Udacity's [Cloud Developer Nanodegree Program](https://www.udacity.com/course/cloud-developer-nanodegree--nd9990).
 
 Udagram is split in 4 services:
 
@@ -30,7 +30,7 @@ A `.travis.yml` configuration file is provided for building and deploying the ap
 3. Deploying the application to a Kubernetes cluster.
 
 # Evidence: screenshots and links
-To demonstrate the implementation of all of the features required by the rubric of the third project of Udacity's [Cloud Developer Nanodegree Program](https://www.udacity.com/course//cloud-developer-nanodegree--nd9990), the following screenshots and links are provided:
+To demonstrate the implementation of all of the features required by the rubric of the third project of Udacity's [Cloud Developer Nanodegree Program](https://www.udacity.com/course/cloud-developer-nanodegree--nd9990), the following screenshots and links are provided:
 
 * A screenshot of the application running (see [screenshots](https://github.com/aisva/project-3-microservices/tree/master/screenshots) folder).
 * Screenshots of Travis CI that show how the application is successfully built and deployed (see [screenshots](https://github.com/aisva/project-3-microservices/tree/master/screenshots) folder).

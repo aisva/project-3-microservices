@@ -13,9 +13,12 @@ All the 4 services above are containerized in Docker containers. You can build t
 
 ```docker-compose -f deployment/docker/docker-compose-build.yaml build --parallel```
 
-Then, you can run all the containers with the following command:
+Then, you can run all the containers with the following commands:
 
-```docker-compose up```
+```
+cd deployment/docker
+docker-compose up
+```
 
 The application will be accessible on: `http://localhost:8100`.
 
